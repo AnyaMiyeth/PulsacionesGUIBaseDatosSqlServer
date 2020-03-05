@@ -13,9 +13,9 @@ namespace DAL
 
         List<Persona> personas = new List<Persona>();
       
-        public  PersonaRepository(SqlConnection connection)
+        public  PersonaRepository(Conexion connection)
         {
-            connectionBD = connection;
+            connectionBD = connection.ConnectionString;
             
 
         }

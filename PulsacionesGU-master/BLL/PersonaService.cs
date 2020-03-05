@@ -11,13 +11,12 @@ namespace BLL
 {
     public  class PersonaService
     {
-       private SqlConnection conexion;
+       private Conexion conexion;
        private  PersonaRepository repositorio;
         public PersonaService()
         {
             
-            conexion = new SqlConnection();
-            conexion.ConnectionString = @"Data Source=.;Initial Catalog=BDPulsacion;Integrated Security=True";
+            
             repositorio = new PersonaRepository(conexion);
         }
         public  string Guardar(Persona persona)
